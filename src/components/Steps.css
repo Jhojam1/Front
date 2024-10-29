@@ -7,6 +7,10 @@
     animation: fadeInUp 1.5s ease;
 }
 
+.steps h2{
+    font-size: 2rem;
+}
+
 .step-cards {
     display: flex;
     justify-content: space-evenly;
