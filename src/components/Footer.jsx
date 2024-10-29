@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer() {
     return (
         <footer id="contacto" className="footer">
-            <p>Contacto: ejemplo@correo.com | Teléfono: 123-456-7890</p>
+            <p>Contacto: pqrsmart@gmail.com | Teléfono: 3106992881</p>
         </footer>
     );
 }
