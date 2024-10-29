@@ -6,3 +6,11 @@
   background: linear-gradient(180deg, #F3F6FA, #03072B);
   transition: background 0.5s;
 }
+
+
+html, body {
+  scroll-behavior: smooth;
+  height: 100%; /* Asegura que el body y el html ocupen toda la altura */
+  margin: 0; /* Elimina los márgenes predeterminados */
+  overflow: auto; /* Evita el scroll */
+}

@@ -1,0 +1,133 @@
+/* Estilos para el contenedor de inicio de sesión */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Mantiene el contenedor ocupando toda la altura de la ventana */
+    position: relative; /* Permite el posicionamiento absoluto de elementos hijos */
+}
+
+/* Estilos para el fondo */
+#gradient {
+    width: 100%;
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    position: absolute; /* Asegura que esté detrás de otros elementos */
+    top: 0; /* Posiciona el fondo en la parte superior */
+    left: 0; /* Posiciona el fondo en la parte izquierda */
+    z-index: -1; /* Asegura que el fondo esté detrás del contenedor */
+}
+
+/* Estilos para la tarjeta de inicio de sesión */
+.login-card {
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    padding: 2.5rem 3rem; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 199, 255, 0.2); /* Sombra */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    animation: fadeIn 0.7s ease-in-out, slideIn 0.7s ease-in-out, pulse 2s infinite; /* Animaciones */
+}
+
+/* Animaciones para la tarjeta */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px); /* Comienza desde arriba */
+        opacity: 0; /* Comienza invisible */
+    }
+    100% {
+        transform: translateY(0); /* Termina en su posición original */
+        opacity: 1; /* Termina visible */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02); /* Pequeño efecto de pulsar */
+    }
+}
+
+/* Estilos para los encabezados dentro de la tarjeta */
+.login-card h2 {
+    color: #03072B; /* Color del texto del encabezado */
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+    font-size: 2rem; /* Tamaño de fuente del encabezado */
+    font-weight: 700; /* Peso de la fuente */
+}
+
+/* Estilos para las etiquetas de entrada */
+.login-card label {
+    display: block; /* Hace que la etiqueta ocupe el ancho completo */
+    color: #333; /* Color del texto de la etiqueta */
+    font-size: 1rem; /* Tamaño de fuente de la etiqueta */
+    font-weight: 500; /* Peso de la fuente */
+    margin-top: 0.5rem; /* Espaciado superior */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Estilos para los campos de entrada */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 0.75rem; /* Espaciado interno */
+    margin-top: 0.5rem; /* Espaciado superior */
+    border: 1px solid #cad3e0; /* Borde del campo */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    outline: none; /* Sin contorno */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones */
+}
+
+/* Efecto al enfocar en los campos de entrada */
+.login-card input[type="text"]:focus,
+.login-card input[type="password"]:focus {
+    border-color: #00c7ff; /* Color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 199, 255, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilos para el botón de inicio de sesión */
+.login-btn {
+    width: 100%; /* Ancho completo */
+    background: linear-gradient(90deg, #00c7ff, #0078d7); /* Fondo con gradiente */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de la fuente */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    transition: background 0.4s, box-shadow 0.3s; /* Transiciones */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.login-btn:hover {
+    background: linear-gradient(90deg, #0078d7, #00c7ff); /* Cambia el fondo al pasar */
+    box-shadow: 0px 4px 15px rgba(0, 199, 255, 0.4); /* Sombra al pasar */
+}
+
+/* Estilos para el mensaje de registro */
+.register-prompt {
+    margin-top: 1.5rem; /* Espaciado superior */
+    font-size: 0.85rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el enlace en el mensaje de registro */
+.register-prompt a {
+    color: #0078d7; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Peso de la fuente */
+}
+
+/* Efecto al pasar el mouse sobre el enlace */
+.register-prompt a:hover {
+    text-decoration: underline; /* Subrayado al pasar */
+}
